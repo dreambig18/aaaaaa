@@ -1,0 +1,133 @@
+<%@page import="shop.connection.DbCon"%>
+<%@page import="shop.dao.ProductDao"%>
+<%@page import="shop.model.*"%>
+<%@page import="java.util.*"%>
+<%@page import="java.text.DecimalFormat"%>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+    
+    
+    <%
+DecimalFormat dcf = new DecimalFormat("#.##");
+request.setAttribute("dcf", dcf);
+User auth = (User) request.getSession().getAttribute("auth");
+if (auth != null) {
+    request.setAttribute("person", auth);
+}
+ArrayList<Cart> cart_list = (ArrayList<Cart>) session.getAttribute("cart-list");
+List<Cart> cartProduct = null;
+if (cart_list != null) {
+	ProductDao pDao = new ProductDao(DbCon.getConnection());
+	cartProduct = pDao.getCartProducts(cart_list);
+	double total = pDao.getTotalCartPrice(cart_list);
+	request.setAttribute("total", total);
+	request.setAttribute("cart_list", cart_list);
+}
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/cart.css">
+<%@include file="/head.jsp"%>
+<title>Shop App Cart</title>
+<style type="text/css">
+/* CSS for Body */
+body {
+    background-image: url('https://img.freepik.com/premium-photo/hand-pushing-shopping-cart-trolley-blue-background_33874-314.jpg'); /* Replace with the actual path to your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   background-color: grey; /* Fallback background color if the image doesn't load */
+    font-family: Arial, sans-serif; /* Choose a suitable font family */
+    color: #333; /* Default font color */
+}
+
+/* CSS for Table Header */
+table thead th {
+    background-color: #3498db;
+    color: #c0c0c0;
+}
+
+/* CSS for Table Rows */
+table tbody tr {
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+table tbody tr:hover {
+    background-color: #f2f2f2; /* Background color change on hover */
+}
+
+/* CSS for Buttons */
+.btn {
+    background-color: #3498db;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #1e6da7; /* Button color change on hover */
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+.table tbody td{
+vertical-align: middle;
+}
+.btn-incre, .btn-decre{
+box-shadow: none;
+font-size: 25px;
+}
+</style>
+<meta charset="ISO-8859-1">
+</head>
+<body>
+	<%@include file="/navbar.jsp"%>
+
+	<div class="container my-3">
+		<div class="d-flex py-3"><h3>Total Price: </h3> <a class="mx-3 btn btn-primary" href="cart-check-out">Check Out</a></div>
+		<table class="table table-light">
+			<thead>
+				<tr>
+					<th scope="col">Name</th>
+					<th scope="col">Category</th>
+					<th scope="col">Price</th>
+					<th scope="col">Buy Now</th>
+					<th scope="col">Cancel</th>
+				</tr>
+			</thead>
+			<tbody>
+				<%
+				if (cart_list != null) {
+					for (Cart c : cartProduct) {
+				%>
+				<tr>
+					<td><%=c.getName()%></td>
+					<td><%=c.getCategory()%></td>
+					<td><%= dcf.format(c.getPrice())%></td>
+					<td>
+						<form action="order-now" method="post" class="form-inline">
+						<input type="hidden" name="id" value="<%= c.getId()%>" class="form-input">
+							<div class="form-group d-flex justify-content-between">
+								<a class="btn bnt-sm btn-incre" href="quantity-inc-dec?action=inc&id=<%=c.getId()%>"><i class="fas fa-plus-square"></i></a> 
+								<input type="text" name="quantity" class="form-control"  value="<%=c.getQuantity()%>" readonly> 
+								<a class="btn btn-sm btn-decre" href="quantity-inc-dec?action=dec&id=<%=c.getId()%>"><i class="fas fa-minus-square"></i></a>
+							</div>
+							<button type="submit"  class="btn btn-primary btn-sm">Buy</button>
+							
+						</form>
+					</td>
+					<td><a href="remove-from-cart?id=<%=c.getId() %>" class="btn btn-sm btn-danger">Remove</a></td>
+				</tr>
+
+				<%
+				}}%>
+			</tbody>
+		</table>
+	</div>
+
+	<%@include file="/footer.jsp"%>
+</body>
+</html>
