@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error - Incorrect User Account</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      background-color: #333;
+      padding: 15px 0;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0ICA0HBwgICA0HBwcHBw8ICQcNFREWFhURExMYHSggGBolGxMTITEhMSkrOi4uFx8zODM4Nyg5OjcBCgoKDQ0NDg0NDisZFRkrKy0rKystLSsrKysrKzcrLSsrKystKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAJQBVAMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAAAAgMBBAf/xAAZEAEBAQEBAQAAAAAAAAAAAAAAAQIREgP/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oADAMBAAIRAxEAPwDyY0LDRVPmK4ieV8RqLD4ytnJcRfMdJG4Xyy5W4yxrFxzayjrLq3ENxixmubUTsW2lpis1OsNYxllga2RBnGyNkNIIXg4fjfIE4OKeWeQT4OH8jgJ8YexlgEDaBWBoigh5GHkWKJDSNzDyNYpPI8qcFi4qNhbFbCaiWIlS1SwlYQorWVEYAANDQpoqq5WwhlbFbix0/NfLmxVs6dI3FoKX0y6a1S7c/wBFdVDdYrNS2jpXVS051mlpTVkZZBpAaREZIeRsh5lQsjfJ5DTIifkeVfI8gj5LYvcksBGwti1hLBUrCqUqBWwCKpoeEh41FUyeEyeNxozK1lUJU9KUmmaidTqlTrFRjK1lZRgABpoWNgKZquKhKpK1KrpzpXO3LnR5tuVrXT7F25/Y9rq6prSOtC6T1pm1LRqkotKzWRRIw0RGyHkLFMwQ2YfMZmK5ggmTTJpDzIifkeVvLPKojckuV9ZTsRULE9RfUT1BUbCVTUJRS0QVgpoaUjZViq5p5UpTStSqr1lpPTOrqmtT1RaW1LUZaStpaygZQKyjAAAaxoGlNKm2VRWaNNJSt6uqr6HpPo6aae0lo6y0AyhqIGxkNEDZUyTKmVZUxFsxLC2RKfMUkLlSKg4ywwoiWonqLaT0KjqJaW0jtFS0nVdJaGi0tNS0UDrKOgeVvU+t6uqp0dT6OmhrWWs6zoCsDKiBgCAAAAAA2NY0GtZGyKBrZG8AvBw/GcAoNwcEZGwcEQPlTKeVMqiuFsoZquaIvmnlRzVJVRQUvWWiDVT1TaqdopNI6U1UtVFJpLR9UlGi0tNSooZW8HAYBxvFGdAAMY2sQDAAAAAAAA1jQBmGkASHkEh8xUZMmmT5yeYBLyPK/gXCiFyXy6LklygjwcPqFBh80rZQVlUzUZTSiOiU8055o80It6HpL0PSoe6JaW6JdIo1U9VuqS0UtLW2lorKJGtkQZweT+W+RUvI4r5ZciI2MqlhbBSMrawGBrAAAAAAAaMaDYeEikA2YrnJMr4iobOVM5biK5y0ifkXLomWXIOa5T1l06ylqIObUTsX3EdIpWCs6B5TSpdbKC00aVGVvRFvTPSfoegPaW6L0toGtJay1nUUWsHRAND5hcqZgNkP5bmHkUT8kuXR5JqA59ROxfUS0glSnpKKxjWAAAAAANjWRoGimU4plRXC+EML4VF8RfMRwtmqh5BYJRaonqIbX1UNoI7Q0tuo6RU9EtNolQb1vSDqB+t6To6B+jpOjoG6Ol6zoNtHS9ANNCGgqmVco5qmaIvlRHNUlUMXTfRNURPSOldVLSKnSU9JRWVjWAAAAAANaU0BsUicPAWytiubNWxpUdWKtnTkzpXOmkdM0LpCbF2B9aR3RrSWtCl3UdU+6lqshbSWmtIit6VrAaGDoN6Os6Og0M6AawMAzZS9HQUlPmpSmlEXlPNISm9At6LdJ+mXQN1U7RaW0GUorBQxrAAAAAAAaMANPAANFM0BUVzTytCjZRaAIW1PVAFT0nQECUoCKGAAAAAAAAAAAwA2NYAbDQADdb0AB1lrQBaWgAxlABgAAAAAAAf/2Q==') center/cover no-repeat;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Error - Incorrect User Account</h1>
+    <p>The username or password you entered is incorrect. Please try again.</p>
+  </div>
+</body>
+
+</html>
