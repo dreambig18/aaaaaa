@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Insert title here</title>
+<style>
+        body {
+            background: linear-gradient(45deg, #3498db, #8e44ad);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        form:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:hover,
+        input[type="text"]:focus,
+        input[type="submit"]:hover {
+            border-color: #3498db;
+        }
+
+        input[type="submit"] {
+            background: #3498db;
+            color: #fff;
+            cursor: pointer;
+            outline: none;
+            transition: background 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #2980b9;
+        }
+    </style>
+
+</head>
+<body>
+
+ <form action="CalculationServelet" method="get">
+        Number1 <input type="text" name="no1"><br><br>
+        Number2 <input type="text" name="no2"><br><br>
+        <input type="submit" value="Add"><br><br>
+        <input type="submit" value="Sub"><br><br>
+    </form>
+
+
+</body>
+</html>

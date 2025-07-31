@@ -1,0 +1,41 @@
+
+/* Apply background image to the body */
+body {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/005/163/927/original/login-success-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-icon-vector.jpg'); /* Replace 'your-image.jpg' with your image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Style the heading */
+h3 {
+  font-size: 24px;
+  color: #fff; /* Default font color */
+  text-align: center;
+  margin-top: 100px;
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Change font color on hover */
+h3:hover {
+  color: #00f; /* New font color on hover */
+}
+
+/* Style the "LogOut" link */
+a {
+  display: block;
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 20px auto;
+  border-radius: 5px;
+  width: 100px;
+  transition: background-color 0.3s; /* Smooth background color transition on hover */
+}
+
+/* Change background color on hover */
+a:hover {
+  background-color: #0056b3; /* New background color on hover */
+}

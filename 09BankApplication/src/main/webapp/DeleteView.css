@@ -1,0 +1,71 @@
+@charset "ISO-8859-1";
+/* Apply background image to the body */
+
+
+
+
+/* Apply background image to the body */
+body {
+  background-image: url('https://www.pngmart.com/files/22/Background-PNG-HD-1.png'); /* Replace 'your-image.jpg' with your image path */
+  /* Apply background image to the body */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif; /* Choose your desired font-family */
+  text-align: center;
+}
+
+/* Style the form container */
+form {
+  margin-top: 100px;
+}
+
+/* Style the table container */
+table {
+  background-color: #f8f8f8; /* Background color for the table */
+  margin: 0 auto;
+  border-radius: 5px; /* Rounded corners for the table */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for the table */
+}
+
+/* Style table rows and cells */
+tr, td {
+  padding: 10px;
+}
+
+/* Style the input field */
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth background color transition on hover */
+  font-weight: bold; /* Make the font bold */
+}
+
+/* Change background color and add hover animation to the submit button */
+input[type="submit"]:hover {
+  background-color: #0056b3; /* New background color on hover */
+  animation: scaleButton 0.3s;
+}
+
+/* Define the hover animation */
+@keyframes scaleButton {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
