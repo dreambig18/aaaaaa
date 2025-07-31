@@ -1,0 +1,67 @@
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>AddToCartController</servlet-name>
+  	<display-name>AddToCartController</display-name>
+  	<description></description>
+  	<servlet-class>shop.controller.AddToCartController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CancelOrderController</servlet-name>
+  	<display-name>CancelOrderController</display-name>
+  	<description></description>
+  	<servlet-class>shop.controller.CancelOrderController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CheckOutController</servlet-name>
+  	<display-name>CheckOutController</display-name>
+  	<description></description>
+  	<servlet-class>shop.controller.CheckOutController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LoginController</servlet-name>
+  	<display-name>LoginController</display-name>
+  	<description></description>
+  	<servlet-class>shop.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RemoveFromCartServlet</servlet-name>
+  	<display-name>RemoveFromCartServlet</display-name>
+  	<description></description>
+  	<servlet-class>shop.controller.RemoveFromCartServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>QuantityIncDecController</servlet-name>
+  	<display-name>QuantityIncDecController</display-name>
+  	<description></description>
+  	<servlet-class>shop.controller.QuantityIncDecController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddToCartController</servlet-name>
+  	<url-pattern>/AddToCartController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CancelOrderController</servlet-name>
+  	<url-pattern>/CancelOrderController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CheckOutController</servlet-name>
+  	<url-pattern>/CheckOutController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoginController</servlet-name>
+  	<url-pattern>/LoginController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RemoveFromCartServlet</servlet-name>
+  	<url-pattern>/RemoveFromCartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>QuantityIncDecController</servlet-name>
+  	<url-pattern>/QuantityIncDecController</url-pattern>
+  </servlet-mapping>
+</web-app>
+
+
